@@ -8,8 +8,8 @@ public class ConnectControllerMessage extends Message implements OutgoingMessage
 
     private final String sessionName = "group5";
     private final int sessionVersion = 1;
-    private final boolean discardParseError = false;
-    private final boolean discardEventTypeError = false;
+    private final boolean discardParseErrors = false;
+    private final boolean discardEventTypeErrors = false;
     private final boolean discardMalformedDataErrors = false;
     private final boolean discardInvalidStateErrors = false;
 
