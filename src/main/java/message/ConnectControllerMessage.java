@@ -1,7 +1,6 @@
 package message;
 
 import socket.JsonUtils;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import traffic.EventType;
 
 public class ConnectControllerMessage extends Message implements OutgoingMessage {
