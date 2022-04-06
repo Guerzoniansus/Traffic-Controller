@@ -2,8 +2,6 @@ package handler;
 
 import controller.Controller;
 import message.SessionStartMessage;
-import message.SetAutomobileRouteStateMessage;
-import traffic.ThreeColorLightState;
 
 import java.util.logging.Logger;
 
@@ -15,6 +13,5 @@ public class SessionStartHandler  {
         // TODO
         LOGGER.info("Session started");
         Controller.getInstance().start();
-        Controller.getInstance().sendMessage(new SetAutomobileRouteStateMessage(5, ThreeColorLightState.GREEN));
     }
 }

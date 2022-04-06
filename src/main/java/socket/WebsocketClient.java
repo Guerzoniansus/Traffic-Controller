@@ -39,6 +39,10 @@ public class WebsocketClient extends WebSocketClient {
         super.send(message);
     }
 
+    public void send(OutgoingMessage message) {
+        send(message.toJson());
+    }
+
     @Override
     public void onOpen(ServerHandshake handshakedata) {
         LOGGER.info("Opening websocket");
