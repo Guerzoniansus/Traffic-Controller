@@ -28,14 +28,17 @@ public class CyclistRoute extends Route {
 
     public void setPositive() {
         state = LightState.GREEN;
+        onRouteStateChange();
     }
 
     public void setNegative() {
         state = LightState.RED;
+        onRouteStateChange();
     }
 
     public void setWarning() {
         state = LightState.ORANGE;
+        onRouteStateChange();
     }
 
     public OutgoingMessage createSetRouteStateMessage() {

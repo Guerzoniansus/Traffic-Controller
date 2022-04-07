@@ -40,7 +40,11 @@ public class Controller {
 
         running = true;
 
+        ArrayList<Integer> trafficLightsSetOne = new ArrayList<>(Arrays.asList(4, 5, 10, 11, 33, 34));
+
+        long twelveSeconds = 1000 * 12;
         long tenSeconds = 1000 * 10;
+        long fourSeconds = 1000 * 4;
 
         try {
             Thread.sleep(tenSeconds);
@@ -70,7 +74,7 @@ public class Controller {
             e.printStackTrace();
         }
 
-        ArrayList<Integer> greens = new ArrayList<>(Arrays.asList(1, 2, 8, 22, 33, 34));
+
 
         routes.forEach(route -> {
             if (greens.contains(route.getRouteId())) {
@@ -124,6 +128,8 @@ public class Controller {
             Route route = new BoatRoute(i);
             routes.add(route);
         }
+
+        routes.forEach(route -> route.addRouteListener(() -> notifyRouteStateChange(route)));
     }
 
     public static Controller getInstance() {

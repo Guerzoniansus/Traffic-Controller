@@ -18,6 +18,8 @@ import java.util.logging.Logger;
 
 public class WebsocketClient extends WebSocketClient {
 
+    private final static String SESSION_NAME = "group5";
+
     private final static Logger LOGGER = Logger.getLogger(MessageDecoder.class.getName());
 
     private MessageHandler messageHandler;
@@ -46,7 +48,7 @@ public class WebsocketClient extends WebSocketClient {
     @Override
     public void onOpen(ServerHandshake handshakedata) {
         LOGGER.info("Opening websocket");
-        send(new ConnectControllerMessage().toJson());
+        send(new ConnectControllerMessage(SESSION_NAME).toJson());
     }
 
     @Override

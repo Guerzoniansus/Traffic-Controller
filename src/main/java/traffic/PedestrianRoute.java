@@ -30,14 +30,17 @@ public class PedestrianRoute extends Route {
 
     public void setPositive() {
         state = LightState.GREEN;
+        onRouteStateChange();
     }
 
     public void setNegative() {
         state = LightState.RED;
+        onRouteStateChange();
     }
 
     public void setWarning() {
         state = LightState.BLINKING;
+        onRouteStateChange();
     }
 
     public OutgoingMessage createSetRouteStateMessage() {
