@@ -8,7 +8,7 @@ public class AutomobileRoute extends Route {
     private LightState state;
 
     public AutomobileRoute(int routeId) {
-        super(routeId);
+        super(routeId, 1, 10);
         state = LightState.RED;
     }
 

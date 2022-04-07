@@ -8,7 +8,7 @@ public class PedestrianRoute extends Route {
     private LightState state;
 
     public PedestrianRoute(int routeId) {
-        super(routeId);
+        super(routeId,9, 20);
         state = LightState.RED;
     }
 

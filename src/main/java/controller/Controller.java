@@ -6,9 +6,7 @@ import traffic.*;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Controller {
 
@@ -16,6 +14,11 @@ public class Controller {
 
     private final static String BROKER_URI = "ws://keyslam.com:8080";
             // "ws://localhost:8080/chat/bob"; // "ws://keyslam.com:8080";
+
+    protected final static long ORANGE_DURATION = 1000 * 4;
+    protected final static long GREEN_AND_RED_DURATION = 1000*12;
+
+    private final static ImpossibleRoutes IMPOSSIBLE_ROUTES = new ImpossibleRoutes();
 
     private WebsocketClient websocketClient;
 
@@ -35,60 +38,74 @@ public class Controller {
         }
     }
 
+    void greensAndReds() {
+        List<Route> routesToTurnGreen = new ArrayList<>();
+        List<Integer> greenRouteIds = new ArrayList<>();
+
+
+        // Turn stuff to orange while determining which ones should become green
+
+        routes.stream().sorted(Comparator.comparing(Route::getPriority).reversed()).forEach(route -> {
+            boolean possibleRoute = Collections.disjoint(greenRouteIds, IMPOSSIBLE_ROUTES.getImpossibleRoutes(route.getRouteId()));
+
+            if (possibleRoute) {
+                if (route.isNegative() || route.isPositive()) {
+                    greenRouteIds.add(route.getRouteId());
+
+                    if (route.isNegative()) {
+                        routesToTurnGreen.add(route);
+                    }
+                }
+            }
+
+            else {
+                if (route.isPositive()) {
+                    route.setWarning();
+                }
+
+                if (route.isNegative()) {
+                    route.increasePriority();
+                }
+            }
+        });
+
+        try {
+            Thread.sleep(ORANGE_DURATION);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // Turn lights to green and red
+
+        routesToTurnGreen.forEach(route -> {
+            route.setPositive();
+            route.resetPriority();
+        });
+
+        routes.stream().filter(route -> route.isWarning()).forEach(route -> {
+            route.setNegative();
+            route.increasePriority();
+        });
+
+    }
+
     public void start() {
         setupRoutes();
 
         running = true;
 
-        ArrayList<Integer> trafficLightsSetOne = new ArrayList<>(Arrays.asList(4, 5, 10, 11, 33, 34));
-
-        long twelveSeconds = 1000 * 12;
-        long tenSeconds = 1000 * 10;
-        long fourSeconds = 1000 * 4;
-
-        try {
-            Thread.sleep(tenSeconds);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        routes.forEach(route -> {
-            route.setPositive();
-            notifyRouteStateChange(route);
-        });
-
-        try {
-            Thread.sleep(tenSeconds);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        routes.forEach(route -> {
-            route.setWarning();
-            notifyRouteStateChange(route);
-        });
-
-        try {
-            Thread.sleep(tenSeconds);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-
-
-        routes.forEach(route -> {
-            if (greens.contains(route.getRouteId())) {
-                route.setPositive();
+        new Timer().scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                greensAndReds();
             }
+        }, 0, GREEN_AND_RED_DURATION);
 
-            else route.setNegative();
 
-            notifyRouteStateChange(route);
-        });
     }
 
     private void notifyRouteStateChange(Route route) {
-        websocketClient.send(route.createSetRouteStateMessage());
+        sendMessage(route.createSetRouteStateMessage());
     }
 
     public void sendMessage(OutgoingMessage message) {
@@ -112,24 +129,24 @@ public class Controller {
         }
 
         // Cyclists
-        for (int i = 21; i <= 24; i++) {
-            Route route = new CyclistRoute(i);
-            routes.add(route);
-        }
+//        for (int i = 21; i <= 24; i++) {
+//            Route route = new CyclistRoute(i);
+//            routes.add(route);
+//        }
 
         // Pedestrians
-        for (int i = 31; i <= 38; i++) {
-            Route route = new PedestrianRoute(i);
-            routes.add(route);
-        }
+//        for (int i = 31; i <= 38; i++) {
+//            Route route = new PedestrianRoute(i);
+//            routes.add(route);
+//        }
 
         // Boat
-        for (int i = 41; i <= 42; i++) {
-            Route route = new BoatRoute(i);
-            routes.add(route);
-        }
+//        for (int i = 41; i <= 42; i++) {
+//            Route route = new BoatRoute(i);
+//            routes.add(route);
+//        }
 
-        routes.forEach(route -> route.addRouteListener(() -> notifyRouteStateChange(route)));
+        routes.forEach(route -> route.addRouteListener((x) -> notifyRouteStateChange(x)));
     }
 
     public static Controller getInstance() {

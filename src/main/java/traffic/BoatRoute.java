@@ -7,7 +7,7 @@ public class BoatRoute extends Route {
     private LightState state;
 
     public BoatRoute(int routeId) {
-        super(routeId);
+        super(routeId, 30, 40);
         state = LightState.RED;
     }
 

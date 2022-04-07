@@ -1,5 +1,5 @@
 package traffic;
 
 public interface RouteListener {
-    void onRouteStateChange();
+    void onRouteStateChange(Route route);
 }
