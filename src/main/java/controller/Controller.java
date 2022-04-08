@@ -16,7 +16,7 @@ public class Controller {
             // "ws://localhost:8080/chat/bob"; // "ws://keyslam.com:8080";
 
     protected final static long ORANGE_DURATION = 1000 * 4;
-    protected final static long GREEN_AND_RED_DURATION = 1000*12;
+    protected final static long GREEN_AND_RED_DURATION = 1000*8;
 
     private final static ImpossibleRoutes IMPOSSIBLE_ROUTES = new ImpossibleRoutes();
 
