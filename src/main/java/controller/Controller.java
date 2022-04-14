@@ -39,6 +39,7 @@ public class Controller {
     }
 
     void greensAndReds() {
+        System.out.println("A");
         List<Route> routesToTurnGreen = new ArrayList<>();
         List<Integer> greenRouteIds = new ArrayList<>();
 
@@ -75,6 +76,8 @@ public class Controller {
             e.printStackTrace();
         }
 
+        System.out.println("B");
+
         // Turn lights to green and red
 
         routesToTurnGreen.forEach(route -> {
@@ -86,6 +89,42 @@ public class Controller {
             route.setNegative();
             route.increasePriority();
         });
+
+        boolean two = false;
+        boolean five = false;
+        boolean eight = false;
+
+        for (Route route : routes) {
+            if (route.isPositive()) {
+                if (route.getRouteId() == 2) {
+                    two = true;
+                }
+
+                if (route.getRouteId() == 5) {
+                    five = true;
+                }
+
+                if (route.getRouteId() == 8) {
+                    eight = true;
+                }
+            }
+        }
+
+        if (two && five) {
+            System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+            System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+            System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+            System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+        }
+
+        if (eight && five) {
+            System.out.println("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
+            System.out.println("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
+            System.out.println("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
+            System.out.println("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
+        }
+
+        System.out.println("C");
 
     }
 
@@ -99,7 +138,7 @@ public class Controller {
             public void run() {
                 greensAndReds();
             }
-        }, 0, GREEN_AND_RED_DURATION);
+        }, 0, GREEN_AND_RED_DURATION + ORANGE_DURATION);
 
 
     }
