@@ -18,7 +18,7 @@ import java.util.logging.Logger;
 
 public class WebsocketClient extends WebSocketClient {
 
-    private final static String SESSION_NAME = "hotdog";
+    private final static String SESSION_NAME = "test1111";
 
     private final static Logger LOGGER = Logger.getLogger(MessageDecoder.class.getName());
 
