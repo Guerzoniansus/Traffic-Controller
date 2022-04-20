@@ -10,17 +10,24 @@ public abstract class Route {
     protected final int STARTING_PRIORITY;
     protected final int MAXIMUM_PRIORITY;
 
+    protected LightState state;
     protected int routeId;
     protected List<RouteListener> listeners;
     protected int priority;
 
-    public Route(int routeId, int STARTING_PRIORITY, int MAXIMUM_PRIORITY) {
+    protected int entities;
+
+    public Route(int routeId, int STARTING_PRIORITY, int MAXIMUM_PRIORITY, LightState state) {
+        listeners = new ArrayList<>();
+        entities = 0;
+
         this.STARTING_PRIORITY = STARTING_PRIORITY;
         this.MAXIMUM_PRIORITY = MAXIMUM_PRIORITY;
 
         this.routeId = routeId;
         this.priority = STARTING_PRIORITY;
-        listeners = new ArrayList<>();
+
+        this.state = state;
     }
 
     public int getRouteId() {
@@ -43,6 +50,20 @@ public abstract class Route {
         System.out.println("route: " + getRouteId() + ", new priority: " + getPriority());
         if (this.priority < MAXIMUM_PRIORITY)
             this.priority++;
+    }
+
+    public void addEntity() {
+        entities++;
+    }
+
+    public void removeEntity() {
+        if (entities > 0) {
+            entities--;
+        }
+    }
+
+    public boolean hasEntities() {
+        return entities > 0;
     }
 
     public int getPriority() {

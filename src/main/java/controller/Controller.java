@@ -39,7 +39,6 @@ public class Controller {
     }
 
     void greensAndReds() {
-        System.out.println("A");
         List<Route> routesToTurnGreen = new ArrayList<>();
         List<Integer> greenRouteIds = new ArrayList<>();
 
@@ -49,7 +48,7 @@ public class Controller {
         routes.stream().sorted(Comparator.comparing(Route::getPriority).reversed()).forEach(route -> {
             boolean possibleRoute = Collections.disjoint(greenRouteIds, IMPOSSIBLE_ROUTES.getImpossibleRoutes(route.getRouteId()));
 
-            if (possibleRoute) {
+            if (possibleRoute && route.hasEntities()) {
                 if (route.isNegative() || route.isPositive()) {
                     greenRouteIds.add(route.getRouteId());
 
@@ -64,7 +63,7 @@ public class Controller {
                     route.setWarning();
                 }
 
-                if (route.isNegative()) {
+                if (route.isNegative() && route.hasEntities()) {
                     route.increasePriority();
                 }
             }
@@ -75,8 +74,6 @@ public class Controller {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-        System.out.println("B");
 
         // Turn lights to green and red
 
@@ -104,6 +101,10 @@ public class Controller {
         }, 0, GREEN_AND_RED_DURATION + ORANGE_DURATION);
     }
 
+    public Route getRoute(int routeId) {
+        return routes.stream().filter(route -> route.getRouteId() == routeId).findFirst().get();
+    }
+
     private void notifyRouteStateChange(Route route) {
         sendMessage(route.createSetRouteStateMessage());
     }
@@ -129,16 +130,16 @@ public class Controller {
         }
 
         // Cyclists
-//        for (int i = 21; i <= 24; i++) {
-//            Route route = new CyclistRoute(i);
-//            routes.add(route);
-//        }
+        for (int i = 21; i <= 24; i++) {
+            Route route = new CyclistRoute(i);
+            routes.add(route);
+        }
 
         // Pedestrians
-//        for (int i = 31; i <= 38; i++) {
-//            Route route = new PedestrianRoute(i);
-//            routes.add(route);
-//        }
+        for (int i = 31; i <= 38; i++) {
+            Route route = new PedestrianRoute(i);
+            routes.add(route);
+        }
 
         // Boat
 //        for (int i = 41; i <= 42; i++) {

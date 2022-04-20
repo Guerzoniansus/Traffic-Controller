@@ -46,6 +46,12 @@ public class MessageDecoder {
                     decodedMessage = GSON.fromJson(data, EntityEnteredZoneMessage.class);
                     break;
                 }
+
+                case ENTITY_EXITED_ZONE: {
+                    JsonObject data = jsonObj.get("data").getAsJsonObject();
+                    decodedMessage = GSON.fromJson(data, EntityExitedZoneMessage.class);
+                    break;
+                }
             }
 
             return decodedMessage;

@@ -1,6 +1,7 @@
 package controller;
 
 import handler.EntityEnteredZoneHandler;
+import handler.EntityExitedZoneHandler;
 import handler.SessionStartHandler;
 import message.*;
 
@@ -20,6 +21,11 @@ public class TrafficMessageHandler implements MessageHandler {
 
     public void handleEntityEnteredZoneMessageMessage(EntityEnteredZoneMessage message) {
         new EntityEnteredZoneHandler().handle(message);
+    }
+
+    @Override
+    public void handleEntityExitedZoneMessageMessage(EntityExitedZoneMessage message) {
+        new EntityExitedZoneHandler().handle(message);
     }
 
     public void handleUnknownMessage(UnknownMessage message) {

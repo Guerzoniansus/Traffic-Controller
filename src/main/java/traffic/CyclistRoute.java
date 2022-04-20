@@ -5,11 +5,8 @@ import message.SetCyclistRouteStateMessage;
 
 public class CyclistRoute extends Route {
 
-    private LightState state;
-
     public CyclistRoute(int routeId) {
-        super(routeId, 9, 20);
-        state = LightState.RED;
+        super(routeId, 5, 20, LightState.RED);
     }
 
     public LightState getState() { return state; }

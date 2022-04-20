@@ -4,11 +4,9 @@ import message.OutgoingMessage;
 import message.SetBoatRouteStateMessage;
 
 public class BoatRoute extends Route {
-    private LightState state;
 
     public BoatRoute(int routeId) {
-        super(routeId, 30, 40);
-        state = LightState.RED;
+        super(routeId, 30, 40, LightState.RED);
     }
 
     public LightState getState() {

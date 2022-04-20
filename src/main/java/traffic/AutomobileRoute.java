@@ -5,11 +5,8 @@ import message.SetAutomobileRouteStateMessage;
 
 public class AutomobileRoute extends Route {
 
-    private LightState state;
-
     public AutomobileRoute(int routeId) {
-        super(routeId, 1, 10);
-        state = LightState.RED;
+        super(routeId, 1, 10, LightState.RED);
     }
 
     public LightState getState() { return state; }
