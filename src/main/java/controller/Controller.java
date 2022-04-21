@@ -39,7 +39,6 @@ public class Controller {
     }
 
     void greensAndReds() {
-        System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
         List<Route> routesToTurnGreen = new ArrayList<>();
         List<Integer> greenRouteIds = new ArrayList<>();
 
@@ -77,8 +76,6 @@ public class Controller {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-        System.out.println("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
 
         // Turn lights to green and red
 
