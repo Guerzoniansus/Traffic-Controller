@@ -2,20 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b18bb4cd-e03f-4056-8a68-6d5a0e4dbfa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/handler/EntityExitedZoneHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/message/EntityExitedZoneMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/TrafficMessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TrafficMessageHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/handler/EntityEnteredZoneHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/handler/EntityEnteredZoneHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/MessageHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socket/MessageDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socket/MessageDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traffic/AutomobileRoute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traffic/AutomobileRoute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traffic/BoatRoute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traffic/BoatRoute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traffic/CyclistRoute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traffic/CyclistRoute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traffic/EventType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traffic/EventType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traffic/PedestrianRoute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traffic/PedestrianRoute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traffic/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traffic/Route.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socket/WebsocketClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socket/WebsocketClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/TrafficMessageHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/handler/EntityEnteredZoneHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/handler/EntityEnteredZoneHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/message/MessageHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/message/MessageHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/socket/MessageDecoder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/socket/MessageDecoder$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/socket/MessageDecoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/socket/MessageDecoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/socket/WebsocketClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/socket/WebsocketClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/traffic/AutomobileRoute.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/traffic/AutomobileRoute.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/traffic/BoatRoute.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/traffic/BoatRoute.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/traffic/CyclistRoute.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/traffic/CyclistRoute.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/traffic/EventType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/traffic/EventType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/traffic/PedestrianRoute.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/traffic/PedestrianRoute.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/traffic/Route.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/traffic/Route.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/socket/WebsocketClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="36">
+              <caret line="20" column="60" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#897#898#0" expanded="true" />
@@ -49,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/socket/MessageDecoder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-61">
+            <state relative-caret-position="18">
               <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -58,25 +62,87 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/TrafficMessageHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="27" column="54" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+            <state relative-caret-position="404">
+              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#244#245#0" expanded="true" />
-                <element signature="e#287#288#0" expanded="true" />
+                <element signature="e#389#390#0" expanded="true" />
+                <element signature="e#432#433#0" expanded="true" />
+                <element signature="e#928#929#0" expanded="true" />
+                <element signature="e#979#980#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/handler/EntityExitedZoneHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="79" lean-forward="true" selection-start-line="8" selection-start-column="79" selection-end-line="8" selection-end-column="79" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="138" column="21" lean-forward="true" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
+            <state relative-caret-position="236">
+              <caret line="61" column="18" lean-forward="true" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+              <folding>
+                <element signature="e#3366#3367#0" expanded="true" />
+                <element signature="e#3476#3477#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/traffic/ImpossibleRoutes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
+              <folding>
+                <element signature="e#2548#2549#0" expanded="true" />
+                <element signature="e#2609#2610#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/traffic/AutomobileRoute.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/traffic/PedestrianRoute.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/traffic/CyclistRoute.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+              <folding>
+                <element signature="e#175#176#0" expanded="true" />
+                <element signature="e#228#229#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,13 +150,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/traffic/Route.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-72">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="504">
+              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
               <folding>
-                <element signature="e#1271#1272#0" expanded="true" />
-                <element signature="e#1294#1295#0" expanded="true" />
-                <element signature="e#1440#1441#0" expanded="true" />
-                <element signature="e#1474#1475#0" expanded="true" />
+                <element signature="e#1581#1582#0" expanded="true" />
                 <element signature="e#1612#1613#0" expanded="true" />
               </folding>
             </state>
@@ -158,10 +221,8 @@
         <option value="$PROJECT_DIR$/src/main/java/traffic/RouteListener.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/traffic/ImpossibleRoutes.java" />
-        <option value="$PROJECT_DIR$/src/main/java/socket/WebsocketClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/handler/EntityEnteredZoneHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/message/MessageHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/TrafficMessageHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/handler/EntityExitedZoneHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/message/EntityExitedZoneMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/socket/MessageDecoder.java" />
@@ -171,12 +232,14 @@
         <option value="$PROJECT_DIR$/src/main/java/traffic/PedestrianRoute.java" />
         <option value="$PROJECT_DIR$/src/main/java/traffic/BoatRoute.java" />
         <option value="$PROJECT_DIR$/src/main/java/traffic/AutomobileRoute.java" />
+        <option value="$PROJECT_DIR$/src/main/java/socket/WebsocketClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/TrafficMessageHandler.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="374" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="976" />
     <option name="height" value="722" />
@@ -260,8 +323,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -339,7 +402,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31716418" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32036248" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -348,15 +411,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.5287107" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.19826652" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.29252437" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32839838" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.45840406" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053304" side_tool="true" weight="0.3163597" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32936078" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32839838" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -492,17 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/traffic/ImpossibleRoutes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
-          <folding>
-            <element signature="e#2548#2549#0" expanded="true" />
-            <element signature="e#2609#2610#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/message/IncomingMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -534,30 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/socket/WebsocketClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#897#898#0" expanded="true" />
-            <element signature="e#930#931#0" expanded="true" />
-            <element signature="e#1300#1301#0" expanded="true" />
-            <element signature="e#1338#1339#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/handler/EntityExitedZoneHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/message/EntityExitedZoneMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -578,38 +606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/socket/MessageDecoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-61">
-          <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/traffic/CyclistRoute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
-          <folding>
-            <element signature="e#175#176#0" expanded="true" />
-            <element signature="e#228#229#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/traffic/PedestrianRoute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="e#215#216#0" expanded="true" />
-            <element signature="e#267#268#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/traffic/BoatRoute.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7">
@@ -621,47 +617,109 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/traffic/CyclistRoute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+          <folding>
+            <element signature="e#175#176#0" expanded="true" />
+            <element signature="e#228#229#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/traffic/AutomobileRoute.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#215#216#0" expanded="true" />
-            <element signature="e#268#269#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/traffic/Route.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/socket/MessageDecoder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="e#1271#1272#0" expanded="true" />
-            <element signature="e#1294#1295#0" expanded="true" />
-            <element signature="e#1440#1441#0" expanded="true" />
-            <element signature="e#1474#1475#0" expanded="true" />
-            <element signature="e#1612#1613#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/TrafficMessageHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="27" column="54" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+        <state relative-caret-position="18">
+          <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#244#245#0" expanded="true" />
-            <element signature="e#287#288#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/socket/WebsocketClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="20" column="60" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#897#898#0" expanded="true" />
+            <element signature="e#930#931#0" expanded="true" />
+            <element signature="e#1300#1301#0" expanded="true" />
+            <element signature="e#1338#1339#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="138" column="21" lean-forward="true" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
+        <state relative-caret-position="236">
+          <caret line="61" column="18" lean-forward="true" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+          <folding>
+            <element signature="e#3366#3367#0" expanded="true" />
+            <element signature="e#3476#3477#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/traffic/PedestrianRoute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/traffic/Route.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+          <folding>
+            <element signature="e#1581#1582#0" expanded="true" />
+            <element signature="e#1612#1613#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/traffic/ImpossibleRoutes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
+          <folding>
+            <element signature="e#2548#2549#0" expanded="true" />
+            <element signature="e#2609#2610#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/handler/EntityExitedZoneHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="79" lean-forward="true" selection-start-line="8" selection-start-column="79" selection-end-line="8" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/TrafficMessageHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
+            <element signature="e#979#980#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

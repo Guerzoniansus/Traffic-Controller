@@ -5,7 +5,19 @@ import handler.EntityExitedZoneHandler;
 import handler.SessionStartHandler;
 import message.*;
 
+import javax.swing.text.html.parser.Entity;
+
 public class TrafficMessageHandler implements MessageHandler {
+
+    SessionStartHandler sessionStartHandler;
+    EntityEnteredZoneHandler entityEnteredZoneHandler;
+    EntityExitedZoneHandler entityExitedZoneHandler;
+
+    public TrafficMessageHandler() {
+        sessionStartHandler = new SessionStartHandler();
+        entityEnteredZoneHandler = new EntityEnteredZoneHandler();
+        entityExitedZoneHandler = new EntityExitedZoneHandler();
+    }
 
     public void handleIncomingMessage(IncomingMessage message) {
         message.acceptHandler(this);
@@ -16,16 +28,16 @@ public class TrafficMessageHandler implements MessageHandler {
     }
 
     public void handleSessionStartMessageMessage(SessionStartMessage message) {
-        new SessionStartHandler().handle(message);
+        sessionStartHandler.handle(message);
     }
 
     public void handleEntityEnteredZoneMessageMessage(EntityEnteredZoneMessage message) {
-        new EntityEnteredZoneHandler().handle(message);
+        entityEnteredZoneHandler.handle(message);
     }
 
     @Override
     public void handleEntityExitedZoneMessageMessage(EntityExitedZoneMessage message) {
-        new EntityExitedZoneHandler().handle(message);
+        entityExitedZoneHandler.handle(message);
     }
 
     public void handleUnknownMessage(UnknownMessage message) {
