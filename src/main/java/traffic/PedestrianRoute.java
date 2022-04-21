@@ -6,7 +6,7 @@ import message.SetPedestrianRouteStateMessage;
 public class PedestrianRoute extends Route {
 
     public PedestrianRoute(int routeId) {
-        super(routeId,5, 20, LightState.RED);
+        super(routeId,4, 20, LightState.RED);
     }
 
     public LightState getState() {

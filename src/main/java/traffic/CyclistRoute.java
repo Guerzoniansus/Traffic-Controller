@@ -6,7 +6,7 @@ import message.SetCyclistRouteStateMessage;
 public class CyclistRoute extends Route {
 
     public CyclistRoute(int routeId) {
-        super(routeId, 5, 20, LightState.RED);
+        super(routeId, 4, 20, LightState.RED);
     }
 
     public LightState getState() { return state; }
