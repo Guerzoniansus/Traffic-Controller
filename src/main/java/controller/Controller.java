@@ -15,7 +15,8 @@ public class Controller {
     private final static String BROKER_URI = "ws://keyslam.com:8080";
             // "ws://localhost:8080/chat/bob"; // "ws://keyslam.com:8080";
 
-    protected final static long ORANGE_DURATION = 1000 * 4;
+    protected final static long ORANGE_DURATION = 1000 * 3;
+    protected final static long COOLDOWN_DURATION = 1000 * 3;
     protected final static long GREEN_AND_RED_DURATION = 1000*8;
 
     private final static ImpossibleRoutes IMPOSSIBLE_ROUTES = new ImpossibleRoutes();
@@ -69,25 +70,32 @@ public class Controller {
             }
         });
 
-
-
         try {
             Thread.sleep(ORANGE_DURATION);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        // Turn lights to green and red
+        // Turn lights red
+
+        routes.stream().filter(route -> route.isWarning()).forEach(route -> {
+            route.setNegative();
+            route.increasePriority();
+        });
+
+        try {
+            Thread.sleep(COOLDOWN_DURATION);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // Turn lights to green
 
         routesToTurnGreen.forEach(route -> {
             route.setPositive();
             route.resetPriority();
         });
 
-        routes.stream().filter(route -> route.isWarning()).forEach(route -> {
-            route.setNegative();
-            route.increasePriority();
-        });
     }
 
     public void start() {
@@ -100,7 +108,7 @@ public class Controller {
             public void run() {
                 greensAndReds();
             }
-        }, 0, GREEN_AND_RED_DURATION + ORANGE_DURATION);
+        }, 0, GREEN_AND_RED_DURATION + ORANGE_DURATION + COOLDOWN_DURATION);
     }
 
     public Route getRoute(int routeId) {
