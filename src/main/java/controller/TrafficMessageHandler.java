@@ -35,9 +35,24 @@ public class TrafficMessageHandler implements MessageHandler {
         entityEnteredZoneHandler.handle(message);
     }
 
-    @Override
     public void handleEntityExitedZoneMessageMessage(EntityExitedZoneMessage message) {
         entityExitedZoneHandler.handle(message);
+    }
+
+    public void handleAcknowledgeBridgeStateMessage(AcknowledgeBridgeStateMessage message) {
+
+    }
+
+    public void handleAcknowledgeBarriersStateMessage(AcknowledgeBarriersStateMessage message) {
+
+    }
+
+    public void handleAcknowledgeBridgeRoadEmptyMessage(AcknowledgeBridgeRoadEmptyMessage message) {
+
+    }
+
+    public void handleAcknowledgeBridgeWaterEmptyMessage(AcknowledgeBridgeWaterEmptyMessage message) {
+
     }
 
     public void handleUnknownMessage(UnknownMessage message) {

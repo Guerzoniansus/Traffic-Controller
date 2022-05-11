@@ -3,7 +3,13 @@ package traffic;
 import message.OutgoingMessage;
 import message.SetBoatRouteStateMessage;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class BoatRoute extends Route {
+
+    public static final List<Integer> BOAT_ROUTES = Arrays.asList(41, 42);
 
     public BoatRoute(int routeId) {
         super(routeId, 30, 40, LightState.RED);

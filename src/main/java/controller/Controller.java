@@ -7,6 +7,7 @@ import traffic.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Controller {
 
@@ -26,6 +27,7 @@ public class Controller {
     private boolean running = false;
 
     private List<Route> routes;
+    private Bridge bridge;
 
     private Controller() {}
 
@@ -39,7 +41,7 @@ public class Controller {
         }
     }
 
-    void greensAndReds() {
+    void doTrafficLightCycle() {
         List<Route> routesToTurnGreen = new ArrayList<>();
         List<Integer> greenRouteIds = new ArrayList<>();
 
@@ -47,6 +49,8 @@ public class Controller {
         // Turn stuff to orange while determining which ones should become green
 
         routes.stream().sorted(Comparator.comparing(Route::getPriority).reversed()).forEach(route -> {
+            if (route instanceof BoatRoute) return;
+
             boolean possibleRoute = Collections.disjoint(greenRouteIds, IMPOSSIBLE_ROUTES.getImpossibleRoutes(route.getRouteId()));
 
             if (possibleRoute && route.hasEntities()) {
@@ -100,19 +104,28 @@ public class Controller {
 
     public void start() {
         setupRoutes();
+        bridge = new Bridge();
 
         running = true;
 
         new Timer().scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                greensAndReds();
+                doTrafficLightCycle();
             }
         }, 0, GREEN_AND_RED_DURATION + ORANGE_DURATION + COOLDOWN_DURATION);
     }
 
     public Route getRoute(int routeId) {
         return routes.stream().filter(route -> route.getRouteId() == routeId).findFirst().get();
+    }
+
+    public Bridge getBridge() {
+        return bridge;
+    }
+
+    public List<Route> getBoatRoutes() {
+        return routes.stream().filter(route -> BoatRoute.BOAT_ROUTES.contains(route)).collect(Collectors.toList());
     }
 
     private void notifyRouteStateChange(Route route) {
@@ -152,10 +165,10 @@ public class Controller {
         }
 
         // Boat
-//        for (int i = 41; i <= 42; i++) {
-//            Route route = new BoatRoute(i);
-//            routes.add(route);
-//        }
+        {
+            routes.add(new BoatRoute(41));
+            routes.add(new BoatRoute(42));
+        }
 
         routes.forEach(route -> route.addRouteListener((x) -> notifyRouteStateChange(x)));
     }
