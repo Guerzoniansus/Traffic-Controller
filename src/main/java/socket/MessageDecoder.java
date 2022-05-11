@@ -52,6 +52,30 @@ public class MessageDecoder {
                     decodedMessage = GSON.fromJson(data, EntityExitedZoneMessage.class);
                     break;
                 }
+
+                case ACKNOWLEDGE_BRIDGE_STATE: {
+                    JsonObject data = jsonObj.get("data").getAsJsonObject();
+                    decodedMessage = GSON.fromJson(data, AcknowledgeBridgeStateMessage.class);
+                    break;
+                }
+
+                case ACKNOWLEDGE_BARRIERS_STATE: {
+                    JsonObject data = jsonObj.get("data").getAsJsonObject();
+                    decodedMessage = GSON.fromJson(data, AcknowledgeBarriersStateMessage.class);
+                    break;
+                }
+
+                case ACKNOWLEDGE_BRIDGE_ROAD_EMPTY: {
+                    JsonObject data = jsonObj.get("data").getAsJsonObject();
+                    decodedMessage = GSON.fromJson(data, AcknowledgeBridgeRoadEmptyMessage.class);
+                    break;
+                }
+
+                case ACKNOWLEDGE_BRIDGE_WATER_EMPTY: {
+                    JsonObject data = jsonObj.get("data").getAsJsonObject();
+                    decodedMessage = GSON.fromJson(data, AcknowledgeBridgeWaterEmptyMessage.class);
+                    break;
+                }
             }
 
             return decodedMessage;

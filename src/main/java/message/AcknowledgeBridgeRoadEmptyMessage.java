@@ -1,6 +1,6 @@
 package message;
 
-public class AcknowledgeBridgeRoadEmptyMessage implements IncomingMessage {
+public class AcknowledgeBridgeRoadEmptyMessage extends Message implements IncomingMessage {
 
     @Override
     public void acceptHandler(MessageHandler handler) {

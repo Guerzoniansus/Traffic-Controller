@@ -2,7 +2,7 @@ package message;
 
 import traffic.PhysicalState;
 
-public class AcknowledgeBridgeStateMessage implements IncomingMessage {
+public class AcknowledgeBridgeStateMessage extends Message implements IncomingMessage {
 
     private PhysicalState state;
 

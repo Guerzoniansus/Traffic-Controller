@@ -1,6 +1,6 @@
 package message;
 
-public class AcknowledgeBridgeWaterEmptyMessage implements IncomingMessage {
+public class AcknowledgeBridgeWaterEmptyMessage extends Message implements IncomingMessage {
     @Override
     public void acceptHandler(MessageHandler handler) {
         handler.handleAcknowledgeBridgeWaterEmptyMessage(this);
