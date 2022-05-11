@@ -25,6 +25,7 @@ public class AcknowledgeBarriersStateHandler {
 
         else if (message.getState() == PhysicalState.UP) {
             OutgoingMessage outgoingMessage = new SetBridgeWarningLightStateMessage(LightState.OFF);
+            controller.sendMessage(outgoingMessage);
         }
     }
 }
