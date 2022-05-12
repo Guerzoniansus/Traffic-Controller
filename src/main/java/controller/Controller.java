@@ -28,6 +28,7 @@ public class Controller {
 
     private List<Route> routes;
     private Bridge bridge;
+    private BoatRoute currentBoatRouteToBeGreen;
 
     private Controller() {}
 
@@ -105,6 +106,7 @@ public class Controller {
     public void start() {
         setupRoutes();
         bridge = new Bridge();
+        currentBoatRouteToBeGreen = null;
 
         running = true;
 
@@ -126,6 +128,14 @@ public class Controller {
 
     public List<Route> getBoatRoutes() {
         return routes.stream().filter(route -> route instanceof BoatRoute).collect(Collectors.toList());
+    }
+
+    public void setCurrentBoatRouteToBeGreen(BoatRoute boatRoute) {
+        this.currentBoatRouteToBeGreen = boatRoute;
+    }
+
+    public BoatRoute getCurrentBoatRouteToBeGreen() {
+        return currentBoatRouteToBeGreen;
     }
 
     private void notifyRouteStateChange(Route route) {

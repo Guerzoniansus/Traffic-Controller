@@ -17,6 +17,7 @@ public class EntityEnteredZoneHandler {
 
         if (BoatRoute.BOAT_ROUTES.contains(routeId) &&
                 controller.getBridge().isClosed() && controller.getBridge().isProcessing() == false) {
+            controller.setCurrentBoatRouteToBeGreen((BoatRoute) controller.getRoute(routeId));
             controller.getBridge().startProcessing();
 
             OutgoingMessage warningLightStateMessage = new SetBridgeWarningLightStateMessage(LightState.ON);

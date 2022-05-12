@@ -16,7 +16,7 @@ public class AcknowledgeBarriersStateHandler {
 
         if (message.getState() == PhysicalState.DOWN) {
             if (controller.getBridge().isClosed() && controller.getBridge().isProcessing()) {
-                controller.getBoatRoutes().forEach(route -> route.setWarning());
+                controller.getCurrentBoatRouteToBeGreen().setWarning();
 
                 OutgoingMessage outgoingMessage = new RequestBridgeStateMessage(PhysicalState.UP);
                 controller.sendMessage(outgoingMessage);

@@ -18,7 +18,7 @@ public class AcknowledgeBridgeStateHandler {
             if (bridge.isClosed() && bridge.isProcessing()) {
                 bridge.open();
 
-                controller.getBoatRoutes().forEach(route -> route.setPositive());
+                controller.getCurrentBoatRouteToBeGreen().setPositive();
 
                 OutgoingMessage outgoingMessage = new RequestBridgeWaterEmptyMessage();
                 controller.sendMessage(outgoingMessage);
