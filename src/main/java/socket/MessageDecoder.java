@@ -67,14 +67,12 @@ public class MessageDecoder {
                 }
 
                 case ACKNOWLEDGE_BRIDGE_ROAD_EMPTY: {
-                    JsonObject data = jsonObj.get("data").getAsJsonObject();
-                    decodedMessage = GSON.fromJson(data, AcknowledgeBridgeRoadEmptyMessage.class);
+                    decodedMessage = new AcknowledgeBridgeRoadEmptyMessage();
                     break;
                 }
 
                 case ACKNOWLEDGE_BRIDGE_WATER_EMPTY: {
-                    JsonObject data = jsonObj.get("data").getAsJsonObject();
-                    decodedMessage = GSON.fromJson(data, AcknowledgeBridgeWaterEmptyMessage.class);
+                    decodedMessage = new AcknowledgeBridgeWaterEmptyMessage();
                     break;
                 }
 
