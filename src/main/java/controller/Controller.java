@@ -125,7 +125,7 @@ public class Controller {
     }
 
     public List<Route> getBoatRoutes() {
-        return routes.stream().filter(route -> BoatRoute.BOAT_ROUTES.contains(route)).collect(Collectors.toList());
+        return routes.stream().filter(route -> route instanceof BoatRoute).collect(Collectors.toList());
     }
 
     private void notifyRouteStateChange(Route route) {
