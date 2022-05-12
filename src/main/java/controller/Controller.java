@@ -50,7 +50,14 @@ public class Controller {
         // Turn stuff to orange while determining which ones should become green
 
         routes.stream().sorted(Comparator.comparing(Route::getPriority).reversed()).forEach(route -> {
-            if (route instanceof BoatRoute) return;
+            if (route instanceof BoatRoute) {
+                if (bridge.isClosed()) {
+                    return;
+                }
+                if (bridge.isOpen() && bridge.isProcessing()) {
+                    return;
+                }
+            }
 
             boolean possibleRoute = Collections.disjoint(greenRouteIds, IMPOSSIBLE_ROUTES.getImpossibleRoutes(route.getRouteId()));
 

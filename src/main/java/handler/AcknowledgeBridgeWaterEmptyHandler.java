@@ -13,8 +13,11 @@ public class AcknowledgeBridgeWaterEmptyHandler {
         if (controller.getBridge().isOpen()) {
             controller.getBridge().startProcessing();
 
-            controller.getCurrentBoatRouteToBeGreen().removeEntity();
-            controller.getCurrentBoatRouteToBeGreen().setNegative();
+            controller.getBoatRoutes().forEach(route -> {
+                if (route.isNegative() == false) {
+                    route.setNegative();
+                }
+            });
             controller.setCurrentBoatRouteToBeGreen(null);
 
             OutgoingMessage outgoingMessage = new RequestBridgeStateMessage(PhysicalState.DOWN);
