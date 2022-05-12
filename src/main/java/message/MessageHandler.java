@@ -11,4 +11,5 @@ public interface MessageHandler {
     void handleAcknowledgeBarriersStateMessage(AcknowledgeBarriersStateMessage message);
     void handleAcknowledgeBridgeRoadEmptyMessage(AcknowledgeBridgeRoadEmptyMessage message);
     void handleAcknowledgeBridgeWaterEmptyMessage(AcknowledgeBridgeWaterEmptyMessage message);
+    void handleErrorInvalidStateMessage(ErrorInvalidStateMessage message);
 }

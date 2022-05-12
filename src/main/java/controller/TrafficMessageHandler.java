@@ -14,6 +14,7 @@ public class TrafficMessageHandler implements MessageHandler {
     AcknowledgeBarriersStateHandler acknowledgeBarriersStateHandler;
     AcknowledgeBridgeRoadEmptyHandler acknowledgeBridgeRoadEmptyHandler;
     AcknowledgeBridgeWaterEmptyHandler acknowledgeBridgeWaterEmptyHandler;
+    ErrorInvalidStateHandler errorInvalidStateHandler;
 
     public TrafficMessageHandler() {
         sessionStartHandler = new SessionStartHandler();
@@ -23,6 +24,7 @@ public class TrafficMessageHandler implements MessageHandler {
         acknowledgeBarriersStateHandler = new AcknowledgeBarriersStateHandler();
         acknowledgeBridgeRoadEmptyHandler = new AcknowledgeBridgeRoadEmptyHandler();
         acknowledgeBridgeWaterEmptyHandler = new AcknowledgeBridgeWaterEmptyHandler();
+        errorInvalidStateHandler = new ErrorInvalidStateHandler();
     }
 
     public void handleIncomingMessage(IncomingMessage message) {
@@ -59,6 +61,11 @@ public class TrafficMessageHandler implements MessageHandler {
 
     public void handleAcknowledgeBridgeWaterEmptyMessage(AcknowledgeBridgeWaterEmptyMessage message) {
         acknowledgeBridgeWaterEmptyHandler.handle(message);
+    }
+
+    @Override
+    public void handleErrorInvalidStateMessage(ErrorInvalidStateMessage message) {
+        errorInvalidStateHandler.handle(message);
     }
 
     public void handleUnknownMessage(UnknownMessage message) {

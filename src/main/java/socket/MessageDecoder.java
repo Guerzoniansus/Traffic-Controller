@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import handler.ErrorInvalidStateHandler;
 import message.*;
 import traffic.EventType;
 
@@ -74,6 +75,12 @@ public class MessageDecoder {
                 case ACKNOWLEDGE_BRIDGE_WATER_EMPTY: {
                     JsonObject data = jsonObj.get("data").getAsJsonObject();
                     decodedMessage = GSON.fromJson(data, AcknowledgeBridgeWaterEmptyMessage.class);
+                    break;
+                }
+
+                case ERROR_INVALID_STATE: {
+                    JsonObject data = jsonObj.get("data").getAsJsonObject();
+                    decodedMessage = GSON.fromJson(data, ErrorInvalidStateMessage.class);
                     break;
                 }
             }

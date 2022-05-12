@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b18bb4cd-e03f-4056-8a68-6d5a0e4dbfa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/handler/ErrorInvalidStateHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/message/ErrorInvalidStateMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/handler/AcknowledgeBarriersStateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/handler/AcknowledgeBarriersStateHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/handler/AcknowledgeBridgeStateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/handler/AcknowledgeBridgeStateHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/handler/AcknowledgeBridgeWaterEmptyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/handler/AcknowledgeBridgeWaterEmptyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/handler/EntityEnteredZoneHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/handler/EntityEnteredZoneHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TrafficMessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TrafficMessageHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/message/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/MessageHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socket/MessageDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socket/MessageDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traffic/EventType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traffic/EventType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/handler/AcknowledgeBarriersStateHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/handler/AcknowledgeBarriersStateHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/handler/AcknowledgeBridgeStateHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/handler/AcknowledgeBridgeStateHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/handler/AcknowledgeBridgeWaterEmptyHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/handler/AcknowledgeBridgeWaterEmptyHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/handler/EntityEnteredZoneHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/handler/EntityEnteredZoneHandler.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,7 +32,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/handler/AcknowledgeBarriersStateHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
+            <state relative-caret-position="248">
               <caret line="18" column="71" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -46,14 +53,49 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/handler/AcknowledgeBridgeWaterEmptyHandler.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/message/ErrorInvalidStateMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+            <state relative-caret-position="270">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="e#305#306#0" expanded="true" />
+                <element signature="e#343#344#0" expanded="true" />
+                <element signature="e#375#376#0" expanded="true" />
+                <element signature="e#403#404#0" expanded="true" />
+                <element signature="e#516#517#0" expanded="true" />
+                <element signature="e#542#543#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/handler/ErrorInvalidStateHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/socket/MessageDecoder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="446">
+              <caret line="77" column="26" lean-forward="true" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/message/AcknowledgeBarriersStateMessage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -61,33 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/handler/AcknowledgeBridgeStateHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
+            <state relative-caret-position="306">
               <caret line="20" column="72" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/traffic/Bridge.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
-              <folding>
-                <element signature="e#411#412#0" expanded="true" />
-                <element signature="e#446#447#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/socket/MessageDecoder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,35 +126,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="54">
               <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-39">
-              <caret line="108" column="41" selection-start-line="108" selection-start-column="41" selection-end-line="108" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3842#3843#0" expanded="true" />
-                <element signature="e#3899#3900#0" expanded="true" />
-                <element signature="e#3828#3829#0" expanded="true" />
-                <element signature="e#3876#3877#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/traffic/BoatRoute.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
-              <folding>
-                <element signature="e#319#320#0" expanded="true" />
-                <element signature="e#373#374#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -184,8 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/socket/MessageHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/message/MessageHandlers.java" />
         <option value="$PROJECT_DIR$/src/main/java/message/ClientMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/message/OutgoingMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/message/Message.java" />
@@ -215,19 +201,15 @@
         <option value="$PROJECT_DIR$/src/main/java/traffic/PhysicalState.java" />
         <option value="$PROJECT_DIR$/src/main/java/message/RequestBridgeStateMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/message/RequestBarriersStateMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/message/MessageHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/message/RequestBridgeRoadEmptyMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/message/RequestBridgeWaterEmptyMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/traffic/Bridge.java" />
         <option value="$PROJECT_DIR$/src/main/java/handler/AcknowledgeBrigeRoadEmptyHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/socket/WebsocketClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/AcknowledgeBridgeRoadEmptyHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/TrafficMessageHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/traffic/EventType.java" />
         <option value="$PROJECT_DIR$/src/main/java/message/AcknowledgeBridgeStateMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/message/AcknowledgeBarriersStateMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/message/AcknowledgeBridgeRoadEmptyMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/socket/MessageDecoder.java" />
         <option value="$PROJECT_DIR$/src/main/java/message/AcknowledgeBridgeWaterEmptyMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/java/traffic/BoatRoute.java" />
@@ -235,6 +217,12 @@
         <option value="$PROJECT_DIR$/src/main/java/handler/AcknowledgeBarriersStateHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/handler/AcknowledgeBridgeStateHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/handler/AcknowledgeBridgeWaterEmptyHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/message/MessageHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/message/ErrorInvalidStateMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/handler/ErrorInvalidStateHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/TrafficMessageHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/traffic/EventType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/socket/MessageDecoder.java" />
       </list>
     </option>
   </component>
@@ -413,12 +401,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.3163597" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.3163597" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32839838" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.30955586" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.30877572" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053304" side_tool="true" weight="0.3163597" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32827735" />
@@ -463,20 +451,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/message/SessionStartMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="77" selection-start-line="2" selection-start-column="77" selection-end-line="2" selection-end-column="77" />
-          <folding>
-            <element signature="e#445#446#0" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/traffic controller.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/message/UnknownMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -683,20 +657,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/AcknowledgeBridgeRoadEmptyHandler.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/message/MessageHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/traffic/EventType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/message/AcknowledgeBridgeStateMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -709,13 +669,6 @@
             <element signature="e#368#369#0" expanded="true" />
             <element signature="e#402#403#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/message/AcknowledgeBarriersStateMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -761,18 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/TrafficMessageHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1229#1230#0" expanded="true" />
-            <element signature="e#1272#1273#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/socket/WebsocketClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="846">
@@ -806,16 +747,6 @@
           <folding>
             <element signature="e#411#412#0" expanded="true" />
             <element signature="e#446#447#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/socket/MessageDecoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -866,10 +797,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/handler/AcknowledgeBarriersStateHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/handler/AcknowledgeBridgeWaterEmptyHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="18" column="71" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
+        <state relative-caret-position="414">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -878,7 +809,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/handler/AcknowledgeBridgeStateHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="306">
           <caret line="20" column="72" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -896,10 +827,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/handler/AcknowledgeBridgeWaterEmptyHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/handler/AcknowledgeBarriersStateHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        <state relative-caret-position="248">
+          <caret line="18" column="71" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/message/AcknowledgeBarriersStateMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/message/MessageHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="74" selection-start-line="13" selection-start-column="74" selection-end-line="13" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/message/ErrorInvalidStateMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#305#306#0" expanded="true" />
+            <element signature="e#343#344#0" expanded="true" />
+            <element signature="e#375#376#0" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/TrafficMessageHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="67" column="49" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1229#1230#0" expanded="true" />
+            <element signature="e#1272#1273#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/handler/ErrorInvalidStateHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/traffic/EventType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/socket/MessageDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="77" column="26" lean-forward="true" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
