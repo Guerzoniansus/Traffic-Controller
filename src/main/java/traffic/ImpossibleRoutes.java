@@ -9,17 +9,17 @@ public class ImpossibleRoutes {
     public ImpossibleRoutes() {
         IMPOSSIBLE_ROUTES = new HashMap<>();
 
-        IMPOSSIBLE_ROUTES.put(1, new ArrayList<>(Arrays.asList(5, 9, 12, 24, 31, 38)));
+        IMPOSSIBLE_ROUTES.put(1, new ArrayList<>(Arrays.asList(5, 9, 12, 21, 24, 31, 38)));
         IMPOSSIBLE_ROUTES.put(2, new ArrayList<>(Arrays.asList(5, 9, 10, 11, 12, 21, 23, 31, 36)));
         IMPOSSIBLE_ROUTES.put(3, new ArrayList<>(Arrays.asList(5, 7, 8, 11, 12, 15, 21, 22, 31, 34)));
         IMPOSSIBLE_ROUTES.put(4, new ArrayList<>(Arrays.asList(8, 12, 15, 21, 22, 32, 33)));
         IMPOSSIBLE_ROUTES.put(5, new ArrayList<>(Arrays.asList(1, 2, 3, 8, 9, 11, 12, 15, 22, 23, 24, 33, 36, 38)));
         IMPOSSIBLE_ROUTES.put(7, new ArrayList<>(Arrays.asList(3, 11, 15, 22, 23, 34, 35)));
         IMPOSSIBLE_ROUTES.put(8, new ArrayList<>(Arrays.asList(3, 4, 5, 11, 12, 21, 23, 32, 35)));
-        IMPOSSIBLE_ROUTES.put(9, new ArrayList<>(Arrays.asList(1, 2, 5, 11, 12, 23, 24, 35)));
+        IMPOSSIBLE_ROUTES.put(9, new ArrayList<>(Arrays.asList(1, 2, 5, 11, 12, 23, 24, 35, 38)));
         IMPOSSIBLE_ROUTES.put(10, new ArrayList<>(Arrays.asList(2, 23, 24, 36, 37)));
         IMPOSSIBLE_ROUTES.put(11, new ArrayList<>(Arrays.asList(2, 3, 5, 7, 8, 9, 15, 22, 24, 34, 37)));
-        IMPOSSIBLE_ROUTES.put(12, new ArrayList<>(Arrays.asList(2, 3, 4, 5, 8, 9, 21, 24, 31, 37)));
+        IMPOSSIBLE_ROUTES.put(12, new ArrayList<>(Arrays.asList(2, 3, 4, 5, 8, 9, 21, 24, 32, 37)));
         IMPOSSIBLE_ROUTES.put(15, new ArrayList<>(Arrays.asList(3, 4, 5, 7, 11)));
         IMPOSSIBLE_ROUTES.put(21, new ArrayList<>(Arrays.asList(1, 2, 3, 4, 8, 12)));
         IMPOSSIBLE_ROUTES.put(22, new ArrayList<>(Arrays.asList(3, 4, 5, 7, 11)));
