@@ -7,10 +7,10 @@ public class ConnectControllerMessage extends Message implements OutgoingMessage
 
     private final String sessionName;
     private final int sessionVersion = 1;
-    private final boolean discardParseErrors = false;
-    private final boolean discardEventTypeErrors = false;
-    private final boolean discardMalformedDataErrors = false;
-    private final boolean discardInvalidStateErrors = false;
+    private final boolean discardParseErrors = true;
+    private final boolean discardEventTypeErrors = true;
+    private final boolean discardMalformedDataErrors = true;
+    private final boolean discardInvalidStateErrors = true;
 
     public ConnectControllerMessage(String sessionName) {
         this.sessionName = sessionName;
