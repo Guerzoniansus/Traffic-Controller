@@ -62,6 +62,10 @@ public abstract class Route {
         }
     }
 
+    public int getAmountOfEntities() {
+        return entities;
+    }
+
     public boolean hasEntities() {
         return entities > 0;
     }
