@@ -10,7 +10,7 @@ public class EntityExitedZoneMessage extends Message implements IncomingMessage 
     }
 
     public void acceptHandler(MessageHandler handler) {
-        handler.handleEntityExitedZoneMessageMessage(this);
+        handler.handleEntityExitedZoneMessage(this);
     }
 
     public int getRouteId() {

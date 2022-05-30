@@ -3,9 +3,9 @@ package message;
 public interface MessageHandler {
     void handleIncomingMessage(IncomingMessage message);
     void handleOutgoingMessage(OutgoingMessage message);
-    void handleSessionStartMessageMessage(SessionStartMessage message);
-    void handleEntityEnteredZoneMessageMessage(EntityEnteredZoneMessage message);
-    void handleEntityExitedZoneMessageMessage(EntityExitedZoneMessage message);
+    void handleSessionStartMessage(SessionStartMessage message);
+    void handleEntityEnteredZoneMessage(EntityEnteredZoneMessage message);
+    void handleEntityExitedZoneMessage(EntityExitedZoneMessage message);
     void handleUnknownMessage(UnknownMessage message);
     void handleAcknowledgeBridgeStateMessage(AcknowledgeBridgeStateMessage message);
     void handleAcknowledgeBarriersStateMessage(AcknowledgeBarriersStateMessage message);

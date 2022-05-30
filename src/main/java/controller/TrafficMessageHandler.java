@@ -35,15 +35,15 @@ public class TrafficMessageHandler implements MessageHandler {
         // TODO
     }
 
-    public void handleSessionStartMessageMessage(SessionStartMessage message) {
+    public void handleSessionStartMessage(SessionStartMessage message) {
         sessionStartHandler.handle(message);
     }
 
-    public void handleEntityEnteredZoneMessageMessage(EntityEnteredZoneMessage message) {
+    public void handleEntityEnteredZoneMessage(EntityEnteredZoneMessage message) {
         entityEnteredZoneHandler.handle(message);
     }
 
-    public void handleEntityExitedZoneMessageMessage(EntityExitedZoneMessage message) {
+    public void handleEntityExitedZoneMessage(EntityExitedZoneMessage message) {
         entityExitedZoneHandler.handle(message);
     }
 
