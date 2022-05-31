@@ -2,12 +2,22 @@ package traffic;
 
 import java.util.*;
 
+/**
+ * A class to check for which route combinations are impossible
+ */
 public class ImpossibleRoutes {
 
     private final Map<Integer, List<Integer>> IMPOSSIBLE_ROUTES;
 
+    /**
+     * Impossible routes
+     */
     public ImpossibleRoutes() {
         IMPOSSIBLE_ROUTES = new HashMap<>();
+
+        // Key: route ID
+        // Value: a List
+        // List contents: route IDs of routes that can NOT be green at the same time as the key
 
         IMPOSSIBLE_ROUTES.put(1, new ArrayList<>(Arrays.asList(5, 9, 12, 21, 24, 31, 38)));
         IMPOSSIBLE_ROUTES.put(2, new ArrayList<>(Arrays.asList(5, 9, 10, 11, 12, 21, 23, 31, 36)));
@@ -37,6 +47,12 @@ public class ImpossibleRoutes {
         IMPOSSIBLE_ROUTES.put(42, new ArrayList<>(Arrays.asList(41)));
     }
 
+    /**
+     * Gets routes that can NOT be green at the same time as the route given as argument.
+     *
+     * @param routeToCheckFor the route to compare with.
+     * @return the route IDs of routes that can NOT be green at the same time as the compared route given as argument
+     */
     public List<Integer> getImpossibleRoutes(int routeToCheckFor) {
         return IMPOSSIBLE_ROUTES.get(routeToCheckFor);
     }

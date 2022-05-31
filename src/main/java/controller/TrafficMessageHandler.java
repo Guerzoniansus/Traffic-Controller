@@ -5,7 +5,11 @@ import message.*;
 
 import javax.swing.text.html.parser.Entity;
 
+/**
+ * Default message handler for the traffic simulation
+ */
 public class TrafficMessageHandler implements MessageHandler {
+
 
     SessionStartHandler sessionStartHandler;
     EntityEnteredZoneHandler entityEnteredZoneHandler;
@@ -16,6 +20,9 @@ public class TrafficMessageHandler implements MessageHandler {
     AcknowledgeBridgeWaterEmptyHandler acknowledgeBridgeWaterEmptyHandler;
     ErrorInvalidStateHandler errorInvalidStateHandler;
 
+    /**
+     * Traffic message handler constructor
+     */
     public TrafficMessageHandler() {
         sessionStartHandler = new SessionStartHandler();
         entityEnteredZoneHandler = new EntityEnteredZoneHandler();

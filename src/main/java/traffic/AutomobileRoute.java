@@ -3,8 +3,16 @@ package traffic;
 import message.OutgoingMessage;
 import message.SetAutomobileRouteStateMessage;
 
+/**
+ * Automobile route
+ */
 public class AutomobileRoute extends Route {
 
+    /**
+     * Automobile route constructor
+     *
+     * @param routeId route id
+     */
     public AutomobileRoute(int routeId) {
         super(routeId, 1, 20, LightState.RED);
     }

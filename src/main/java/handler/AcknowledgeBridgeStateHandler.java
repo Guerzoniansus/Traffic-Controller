@@ -8,8 +8,16 @@ import message.RequestBridgeWaterEmptyMessage;
 import traffic.Bridge;
 import traffic.PhysicalState;
 
+/**
+ * Acknowledge bridge state handler
+ */
 public class AcknowledgeBridgeStateHandler {
 
+    /**
+     * Handle a message
+     *
+     * @param message the message to handle
+     */
     public void handle(AcknowledgeBridgeStateMessage message) {
         Controller controller = Controller.getInstance();
         Bridge bridge = controller.getBridge();

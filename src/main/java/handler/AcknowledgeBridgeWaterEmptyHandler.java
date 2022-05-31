@@ -7,7 +7,16 @@ import message.RequestBridgeStateMessage;
 import message.RequestBridgeWaterEmptyMessage;
 import traffic.PhysicalState;
 
+/**
+ * Acknowledge bridge water empty handler
+ */
 public class AcknowledgeBridgeWaterEmptyHandler {
+
+    /**
+     * Handle a message
+     *
+     * @param message the message to handle
+     */
     public void handle(AcknowledgeBridgeWaterEmptyMessage message) {
         Controller controller = Controller.getInstance();
 

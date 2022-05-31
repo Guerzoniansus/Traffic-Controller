@@ -10,7 +10,16 @@ import traffic.LightState;
 import traffic.PhysicalState;
 import traffic.Route;
 
+/**
+ * Acknowledge barriers state handler
+ */
 public class AcknowledgeBarriersStateHandler {
+
+    /**
+     * Handle a message
+     *
+     * @param message the message to handle
+     */
     public void handle(AcknowledgeBarriersStateMessage message) {
         Controller controller = Controller.getInstance();
 

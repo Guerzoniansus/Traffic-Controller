@@ -3,8 +3,16 @@ package traffic;
 import message.OutgoingMessage;
 import message.SetPedestrianRouteStateMessage;
 
+/**
+ * Pedestrian route
+ */
 public class PedestrianRoute extends Route {
 
+    /**
+     * Pedestrian route
+     *
+     * @param routeId route id
+     */
     public PedestrianRoute(int routeId) {
         super(routeId,4, 20, LightState.RED);
     }

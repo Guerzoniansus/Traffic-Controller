@@ -9,6 +9,9 @@ import java.net.URISyntaxException;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * Controller responsible for keeping track of routes
+ */
 public class Controller {
 
     private static Controller INSTANCE;
@@ -16,15 +19,24 @@ public class Controller {
     private final static String BROKER_URI = "ws://keyslam.com:8080";
             // "ws://localhost:8080/chat/bob"; // "ws://keyslam.com:8080";
 
+    /**
+     * How long traffic lights should be orange in milliseconds
+     */
     protected final static long ORANGE_DURATION = 1000 * 3;
+
+    /**
+     * Time between turning lights red and turning lights green
+     */
     protected final static long COOLDOWN_DURATION = 1000 * 3;
+
+    /**
+     * How long lights should be red and green before turning something to orange
+     */
     protected final static long GREEN_AND_RED_DURATION = 1000*8;
 
     private final static ImpossibleRoutes IMPOSSIBLE_ROUTES = new ImpossibleRoutes();
 
     private WebsocketClient websocketClient;
-
-    private boolean running = false;
 
     private List<Route> routes;
     private Bridge bridge;
@@ -32,6 +44,9 @@ public class Controller {
 
     private Controller() {}
 
+    /**
+     * Set up the controller so it can start running
+     */
     public void setup() {
         try {
             websocketClient = new WebsocketClient(new URI(BROKER_URI), new TrafficMessageHandler());
@@ -42,7 +57,10 @@ public class Controller {
         }
     }
 
-    void doTrafficLightCycle() {
+    /**
+     * Do traffic light cycle from green, to orange, to red, to green again
+     */
+    private void doTrafficLightCycle() {
         List<Route> routesToTurnGreen = new ArrayList<>();
         List<Integer> greenRouteIds = new ArrayList<>();
 
@@ -59,6 +77,7 @@ public class Controller {
                 }
             }
 
+            // Check if a route does not clash with a route that is or will be green
             boolean possibleRoute = Collections.disjoint(greenRouteIds, IMPOSSIBLE_ROUTES.getImpossibleRoutes(route.getRouteId()));
 
             if (possibleRoute && route.hasEntities()) {
@@ -110,12 +129,13 @@ public class Controller {
 
     }
 
+    /**
+     * Start the simulation
+     */
     public void start() {
         setupRoutes();
         bridge = new Bridge();
         currentBoatRouteToBeGreen = null;
-
-        running = true;
 
         new Timer().scheduleAtFixedRate(new TimerTask() {
             @Override
@@ -125,30 +145,65 @@ public class Controller {
         }, 0, GREEN_AND_RED_DURATION + ORANGE_DURATION + COOLDOWN_DURATION);
     }
 
+    /**
+     * Get a specific route
+     *
+     * @param routeId The ID of the route
+     * @return the route corresponding to the route id
+     */
     public Route getRoute(int routeId) {
         return routes.stream().filter(route -> route.getRouteId() == routeId).findFirst().get();
     }
 
+    /**
+     * Gets bridge *
+     *
+     * @return the bridge
+     */
     public Bridge getBridge() {
         return bridge;
     }
 
+    /**
+     * Gets boat routes
+     *
+     * @return the boat routes
+     */
     public List<Route> getBoatRoutes() {
         return routes.stream().filter(route -> route instanceof BoatRoute).collect(Collectors.toList());
     }
 
+    /**
+     * Sets current boat route to be green
+     *
+     * @param boatRoute boat route
+     */
     public void setCurrentBoatRouteToBeGreen(BoatRoute boatRoute) {
         this.currentBoatRouteToBeGreen = boatRoute;
     }
 
+    /**
+     * Gets current boat route to be green
+     *
+     * @return the current boat route to be green
+     */
     public BoatRoute getCurrentBoatRouteToBeGreen() {
         return currentBoatRouteToBeGreen;
     }
 
+    /**
+     * Function that responds to route state change events
+     * @param route The route that got changed
+     */
     private void notifyRouteStateChange(Route route) {
         sendMessage(route.createSetRouteStateMessage());
     }
 
+    /**
+     * Send a message over the web socket client
+     *
+     * @param message The message to send
+     */
     public void sendMessage(OutgoingMessage message) {
         websocketClient.send(message.toJson());
     }
@@ -190,6 +245,11 @@ public class Controller {
         routes.forEach(route -> route.addRouteListener((x) -> notifyRouteStateChange(x)));
     }
 
+    /**
+     * Gets the singleton instance
+     *
+     * @return the instance
+     */
     public static Controller getInstance() {
         if (INSTANCE == null) {
             INSTANCE = new Controller();

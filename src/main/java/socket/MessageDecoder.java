@@ -12,12 +12,21 @@ import java.util.logging.Logger;
 
 import static socket.JsonUtils.GSON;
 
+/**
+ * This class decodes (JSON) Strings into Message objects.
+ */
 public class MessageDecoder {
 
     private final static Logger LOGGER = Logger.getLogger(MessageDecoder.class.getName());
 
-    static JsonParser parser = new JsonParser();
+    private static JsonParser parser = new JsonParser();
 
+    /**
+     * Decode a message
+     *
+     * @param message The (JSON) message to decode
+     * @return A Message object of the decoded String with the data fields initialized
+     */
     public static Message decodeMessage(String message) {
         JsonObject jsonObj = parser.parse(message).getAsJsonObject();
 
@@ -30,7 +39,6 @@ public class MessageDecoder {
         }
 
         String eventTypeString = eventTypeJson.getAsString();
-
 
         try {
             EventType eventType = EventType.valueOf(eventTypeString);

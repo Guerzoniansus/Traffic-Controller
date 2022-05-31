@@ -5,8 +5,16 @@ import message.*;
 import traffic.BoatRoute;
 import traffic.LightState;
 
+/**
+ * Entity entered zone handler
+ */
 public class EntityEnteredZoneHandler {
 
+    /**
+     * Handle a message
+     *
+     * @param message the message to handle
+     */
     public void handle(EntityEnteredZoneMessage message) {
         Controller controller = Controller.getInstance();
 

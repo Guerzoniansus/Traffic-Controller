@@ -10,12 +10,14 @@ import org.java_websocket.handshake.ServerHandshake;
 
 import java.net.URI;
 import java.nio.ByteBuffer;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 // Code from: https://stackoverflow.com/questions/26452903/javax-websocket-client-simple-example
+// The code is slightly modified to suit this project
 
+/**
+ * Websocket client used to send and receive messages
+ */
 public class WebsocketClient extends WebSocketClient {
 
     private final static String SESSION_NAME = "groep5";
@@ -25,10 +27,12 @@ public class WebsocketClient extends WebSocketClient {
     private MessageHandler messageHandler;
     private MessageDecoder decoder;
 
-    public WebsocketClient(URI uri, Draft draft) {
-        super(uri, draft);
-    }
-
+    /**
+     * Websocket client constructor
+     *
+     * @param uri            the URI to connect to
+     * @param messageHandler the object that will handle the incoming message
+     */
     public WebsocketClient(URI uri, MessageHandler messageHandler) {
         super(uri);
         this.messageHandler = messageHandler;
@@ -41,6 +45,11 @@ public class WebsocketClient extends WebSocketClient {
         super.send(message);
     }
 
+    /**
+     * Send an OutgoingMessage
+     *
+     * @param message the message to send
+     */
     public void send(OutgoingMessage message) {
         send(message.toJson());
     }

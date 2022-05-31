@@ -1,5 +1,8 @@
 package traffic;
 
+/**
+ * Event types are used as IDs for incoming and outgoing messages.
+ */
 public enum EventType {
     SESSION_START,
     CONNECT_CONTROLLER,

@@ -7,10 +7,21 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Boat route
+ */
 public class BoatRoute extends Route {
 
+    /**
+     * BOAT_ROUTES
+     */
     public static final List<Integer> BOAT_ROUTES = Arrays.asList(41, 42);
 
+    /**
+     * Boat route
+     *
+     * @param routeId route id
+     */
     public BoatRoute(int routeId) {
         super(routeId, 30, 40, LightState.RED);
     }
