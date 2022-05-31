@@ -5,7 +5,6 @@ import message.IncomingMessage;
 import message.MessageHandler;
 import message.OutgoingMessage;
 import org.java_websocket.client.WebSocketClient;
-import org.java_websocket.drafts.Draft;
 import org.java_websocket.handshake.ServerHandshake;
 
 import java.net.URI;

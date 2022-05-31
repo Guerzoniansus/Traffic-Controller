@@ -3,8 +3,6 @@ package controller;
 import handler.*;
 import message.*;
 
-import javax.swing.text.html.parser.Entity;
-
 /**
  * Default message handler for the traffic simulation
  */

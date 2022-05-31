@@ -1,56 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b18bb4cd-e03f-4056-8a68-6d5a0e4dbfa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TrafficMessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TrafficMessageHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/handler/AcknowledgeBarriersStateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/handler/AcknowledgeBarriersStateHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/handler/AcknowledgeBridgeRoadEmptyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/handler/AcknowledgeBridgeRoadEmptyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/handler/AcknowledgeBridgeStateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/handler/AcknowledgeBridgeStateHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/handler/AcknowledgeBridgeWaterEmptyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/handler/AcknowledgeBridgeWaterEmptyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/handler/EntityEnteredZoneHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/handler/EntityEnteredZoneHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/handler/EntityExitedZoneHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/handler/EntityExitedZoneHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/handler/ErrorInvalidStateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/handler/ErrorInvalidStateHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/handler/SessionStartHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/handler/SessionStartHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/AcknowledgeBarriersStateMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/AcknowledgeBarriersStateMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/AcknowledgeBridgeRoadEmptyMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/AcknowledgeBridgeRoadEmptyMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/AcknowledgeBridgeStateMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/AcknowledgeBridgeStateMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/AcknowledgeBridgeWaterEmptyMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/AcknowledgeBridgeWaterEmptyMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/ConnectControllerMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/ConnectControllerMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/EntityEnteredZoneMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/EntityEnteredZoneMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/EntityExitedZoneMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/EntityExitedZoneMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/ErrorInvalidStateMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/ErrorInvalidStateMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/IncomingMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/IncomingMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/MessageHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/OutgoingMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/OutgoingMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/RequestBarriersStateMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/RequestBarriersStateMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/RequestBridgeRoadEmptyMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/RequestBridgeRoadEmptyMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/RequestBridgeStateMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/RequestBridgeStateMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/RequestBridgeWaterEmptyMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/RequestBridgeWaterEmptyMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/SessionStartMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/SessionStartMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/SetAutomobileRouteStateMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/SetAutomobileRouteStateMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/SetBoatRouteStateMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/SetBoatRouteStateMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/SetBridgeWarningLightStateMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/SetBridgeWarningLightStateMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/SetCyclistRouteStateMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/SetCyclistRouteStateMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/SetPedestrianRouteStateMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/SetPedestrianRouteStateMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/message/UnknownMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/message/UnknownMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socket/JsonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socket/JsonUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socket/MessageDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socket/MessageDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socket/WebsocketClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socket/WebsocketClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traffic/AutomobileRoute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traffic/AutomobileRoute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traffic/BoatRoute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traffic/BoatRoute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traffic/Bridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traffic/Bridge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traffic/CyclistRoute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traffic/CyclistRoute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traffic/EventType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traffic/EventType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traffic/ImpossibleRoutes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traffic/ImpossibleRoutes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traffic/LightState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traffic/LightState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traffic/PedestrianRoute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traffic/PedestrianRoute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traffic/PhysicalState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traffic/PhysicalState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traffic/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traffic/Route.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traffic/RouteListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traffic/RouteListener.java" afterDir="false" />
-    </list>
+    <list default="true" id="b18bb4cd-e03f-4056-8a68-6d5a0e4dbfa8" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -367,9 +318,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29371002" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29371002" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -383,7 +333,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32839838" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.032502707" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.2751896" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053304" side_tool="true" weight="0.3163597" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3261105" />
